@@ -7,19 +7,19 @@ This plugin extends Elementor Pro's "Actions After Submit" to seamlessly create 
 ## ✨ Features
 
 * **Native "Action After Submit":** Seamlessly integrates into the Elementor Form editor.
-* **Smart Upserting:** Automatically creates a new subscriber or updates an existing one if the email already exists in your Flodesk account[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).
-* **Dynamic Segment Dropdowns:** Automatically fetches and caches your Flodesk Segment IDs directly into the Elementor editor, saving you from having to look up IDs manually[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span).
+* **Smart Upserting:** Automatically creates a new subscriber or updates an existing one if the email already exists in your Flodesk account.
+* **Dynamic Segment Dropdowns:** Automatically fetches and caches your Flodesk Segment IDs directly into the Elementor editor, saving you from having to look up IDs manually.
 * **Static Segment Assignment:** Easily select one or multiple segments to assign to *all* users who submit a specific form.
 * **Conditional Segment Mapping:** Route users to specific segments based on their form answers (e.g., If the "Role" field equals "Student", assign them to the "Students" segment in Flodesk).
 * **Custom Field Mapping:** Map any Elementor form field to any Flodesk custom field.
-* **Double Opt-in Support:** Toggle Flodesk's double opt-in confirmation email on or off for new subscribers[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span).
+* **Double Opt-in Support:** Toggle Flodesk's double opt-in confirmation email on or off for new subscribers.
 * **Automatic Updates:** Integrated with `plugin-update-checker` to automatically receive updates directly from this GitHub repository.
 
 ## 📋 Requirements
 
 * WordPress 5.8 or higher.
 * Elementor Pro (Required for the Forms widget).
-* A Flodesk account and an active API Key[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).
+* A Flodesk account and an active API Key.
 
 ## 🚀 Installation
 
@@ -45,19 +45,19 @@ Before using the integration, you need to connect the plugin to your Flodesk acc
 3. Click the "Add Action" field and select **Flodesk**.
 4. A new **Flodesk** settings section will appear below. Expand it.
 5. **Map Core Fields:** Enter the Elementor Field IDs for Email, First Name, and Last Name. *(You can find a field's ID by clicking on it in the "Form Fields" section and looking at the "Advanced" tab).*
-6. **Assign Static Segments:** Select any segments you want applied to everyone who submits this form. *(Note: Segments are cached for 1 hour to respect Flodesk's API rate limits[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span).)*
+6. **Assign Static Segments:** Select any segments you want applied to everyone who submits this form. *(Note: Segments are cached for 1 hour to respect Flodesk's API rate limits.*
 7. **Set Conditional Segments (Optional):** Add routing rules based on form responses. Enter the Elementor Field ID, the exact value you want to match, and select the corresponding Flodesk segment target.
 8. **Map Custom Fields (Optional):** Map additional Elementor Field IDs to your custom Flodesk field keys.
 9. **Update/Publish** your page.
 
 ## 🔒 Security & Performance
 
-* **API Rate Limiting:** Flodesk limits API requests to 100 per minute[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span). To prevent hitting this limit while editing Elementor forms, segment lookups are cached in WordPress transients for 60 minutes.
+* **API Rate Limiting:** Flodesk limits API requests to 100 per minute. To prevent hitting this limit while editing Elementor forms, segment lookups are cached in WordPress transients for 60 minutes.
 * **Sanitization:** All form data and inputs are sanitized according to WordPress best practices before being passed to the Flodesk API.
 
 ## 👨‍💻 Developer Notes
 
-This plugin utilizes the Flodesk `/v1/subscribers` API endpoint[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span). It requires the `plugin-update-checker` library located in the `/plugin-update-checker/` directory for GitHub release tracking. Ensure this folder remains intact if you are forking or cloning the repository.
+This plugin utilizes the Flodesk `/v1/subscribers` API endpoint. It requires the `plugin-update-checker` library located in the `/plugin-update-checker/` directory for GitHub release tracking. Ensure this folder remains intact if you are forking or cloning the repository.
 
 ## 📝 License
 
