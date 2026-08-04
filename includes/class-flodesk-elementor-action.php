@@ -13,7 +13,8 @@ class Flodesk_Elementor_Action extends Action_Base {
 		return 'flodesk';
 	}
 
-	public function get_title() {
+	// FIX: Elementor Form Actions require get_label(), not get_title()
+	public function get_label() {
 		return __( 'Flodesk', 'flodesk-elementor' );
 	}
 
