@@ -1,0 +1,13 @@
+# Files and folders left out of the plugin ZIP (rsync exclude patterns).
+.git
+.github
+.gitignore
+.gitattributes
+.distignore
+.DS_Store
+README.md
+readme.md
+SECURITY.md
+node_modules/
+tests/
+phpunit.xml
