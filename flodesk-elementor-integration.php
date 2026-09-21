@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Flodesk Integration for Elementor Forms
  * Description: Integrates Elementor Pro Forms with Flodesk REST API, including field mapping and conditional segment assignment.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Tested up to: 7.0.2
  * Requires PHP: 7.4
  * Author: Potomac Technologies, LLC
@@ -15,6 +15,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'FLODESK_ELEMENTOR_PATH', plugin_dir_path( __FILE__ ) );
+
+// Check GitHub for new releases and install them through the WordPress updater
+$puc_file = FLODESK_ELEMENTOR_PATH . 'plugin-update-checker/plugin-update-checker.php';
+
+if ( file_exists( $puc_file ) ) {
+	require_once $puc_file;
+
+	$flodeskUpdateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+		'https://github.com/rosspotomactech/Flodesk-Elementor-Integration/',
+		__FILE__,
+		'flodesk-elementor-integration'
+	);
+
+	// Install updates from the release ZIP built by the GitHub Action
+	$flodeskUpdateChecker->getVcsApi()->enableReleaseAssets();
+}
 
 // Load classes
 require_once FLODESK_ELEMENTOR_PATH . 'includes/class-flodesk-api.php';
