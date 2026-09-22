@@ -1,6 +1,6 @@
 # Flodesk Integration for Elementor Forms
 
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 **Tested up to:** WordPress 7.0.2
 
